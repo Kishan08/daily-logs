@@ -4,30 +4,53 @@
   	<title>Daily_Log</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-material-design.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <div class="container">
-    	<h1 class="page-header">daily_log</h1>
-   		<form action="#">
-   			<div class="row">
-   				<div class="col-md">
-   					<div class="form-group">
-					    <label for="startTime">Start time</label>
-					    <input type="text" class="form-control" id="startTime" aria-describedby="timetrack" placeholder="Start time">
-					  </div>
-   				</div>
-   				<div class="col-md">
-   					<div class="form-group">
-					    <label for="endTime">End time</label>
-					    <input type="text" class="form-control" id="endTime" aria-describedby="timetrack" placeholder="End time">
-					  </div>
-   				</div>
-   			</div>
-   		</form>
+    <div class="container-fluid">
+      <div class="log_container">
+        <form action="#">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">daily log</h4>
+              <div class="card-text">
+                <div class="form-group text-center">
+                  <!-- <label for="startTime">Start time</label>
+                  <input type="time" class="form-control" id="startTime" aria-describedby="timetrack" placeholder="Start time"> -->
+                  <h1><time>00:00:00</time></h1>
+                </div>
+                <div class="form-group bmd-form-group">
+                  <label for="activity" class="bmd-label-floating">add activity</label>
+                  <textarea class="form-control" id="activity"></textarea>
+                </div>
+                <div class="text-center">
+                  <!-- <button type="button" name="button" class="btn btn-success btn-md">Start</button>
+                  <button type="button" name="button" class="btn btn-danger btn-md">Stop</button> -->
+                  <button type="button" class="btn btn-success" id="start">start</button>
+                  <button type="button" class="btn btn-danger" id="stop">stop</button>
+                  <button type="button" class="btn btn-primary" id="clear">clear</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/HubSpot/tether/v1.3.4/dist/js/tether.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-material-design.iife.min.js"></script>
+    <script>
+      $('body').bootstrapMaterialDesign();
+    </script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
+
+
+<!-- <body onload="show();">
+	<div>Time: <span id="time"></span></div>
+	<input type="button" value="start" onclick="start();">
+	<input type="button" value="stop" onclick="stop();">
+	<input type="button" value="reset" onclick="reset()">
+</body> -->
