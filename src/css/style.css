@@ -9,3 +9,14 @@ body {
 
 .text-center {
   text-align: center; }
+
+.btn-gradient {
+  -webkit-background: linear-gradient(to right, #e96443, #904e95);
+  -moz-background: linear-gradient(to right, #e96443, #904e95);
+  -ms-background: linear-gradient(to right, #e96443, #904e95);
+  -o-background: linear-gradient(to right, #e96443, #904e95);
+  background: linear-gradient(to right, #e96443, #904e95);
+  color: #fff;
+  border-radius: 30px; }
+  .btn-gradient:hover, .btn-gradient:focus {
+    color: #fff; }

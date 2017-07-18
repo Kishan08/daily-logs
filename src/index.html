@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  	<title>Daily_Log</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-material-design.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="log_container">
-        <form action="#">
-          <div class="card">
-            <div class="card-block">
-              <h4 class="card-title">daily log</h4>
-              <div class="card-text">
-                <div class="form-group text-center">
-                  <!-- <label for="startTime">Start time</label>
+
+<head>
+  <title>Daily_Log</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap-material-design.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="log_container">
+      <form action="#" id="log_form">
+        <div class="card">
+          <div class="card-block">
+            <h4 class="card-title">daily_log</h4>
+            <div class="card-text">
+              <div class="form-group text-center">
+                <!-- <label for="startTime">Start time</label>
                   <input type="time" class="form-control" id="startTime" aria-describedby="timetrack" placeholder="Start time"> -->
-                  <h1><time>00:00:00</time></h1>
-                </div>
-                <div class="form-group bmd-form-group">
-                  <label for="activity" class="bmd-label-floating">add activity</label>
-                  <textarea class="form-control" id="activity"></textarea>
-                </div>
+                <h1 id="timer">00:00:00</h1>
+                <!-- <h1><time id="timer">00:00:00</time></h1> -->
                 <div class="text-center">
-                  <!-- <button type="button" name="button" class="btn btn-success btn-md">Start</button>
-                  <button type="button" name="button" class="btn btn-danger btn-md">Stop</button> -->
                   <button type="button" class="btn btn-success" id="start">start</button>
                   <button type="button" class="btn btn-danger" id="stop">stop</button>
                   <button type="button" class="btn btn-primary" id="clear">clear</button>
                 </div>
               </div>
+              <div class="form-group bmd-form-group">
+                <label for="activity" class="bmd-label-floating">add activity</label>
+                <textarea class="form-control" id="getActivity"></textarea>
+              </div>
+              <div class="text-center" style="margin-top:2em;">
+                <button type="submit" class="btn btn-gradient" id="fetchVal">Add Activity</button>
+              </div>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
-    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
-    <script src="https://cdn.rawgit.com/HubSpot/tether/v1.3.4/dist/js/tether.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-material-design.iife.min.js"></script>
-    <script>
-      $('body').bootstrapMaterialDesign();
-    </script>
-    <script type="text/javascript" src="js/main.js"></script>
-  </body>
+  </div>
+  <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+  <script src="https://cdn.rawgit.com/HubSpot/tether/v1.3.4/dist/js/tether.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap-material-design.iife.min.js"></script>
+  <script>
+    $('body').bootstrapMaterialDesign();
+  </script>
+  <script type="text/javascript" src="js/localforage.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
 </html>
 
 
